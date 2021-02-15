@@ -15,7 +15,7 @@ body {
   border-radius: 10px;
   margin: 0 auto;
   padding: 15px;
-  background-color: rgba(148, 14, 70, 0.7);
+  background-color: rgba(148, 14, 70);
   color: white;
 }
 
@@ -151,4 +151,8 @@ h1 {
 .open-source {
   font-size: 15px;
   color: white;
+}
+
+.App footer {
+  font-size: 15px;
 }
