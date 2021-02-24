@@ -62,10 +62,10 @@ let weatherData = {
       </div>
 
       <h6 className="updated">
-        Last updated: today at <span>{weatherData.date}</span>
+        Last updated: <span>{weatherData.date}</span>
       </h6>
 
-      <img src={weatherData.imgUrl} alt={weatherData.weatherDescription} />
+      <img className="imageForExample" src={weatherData.imgUrl} alt={weatherData.weatherDescription} />
       <p className="current-weather-description">
         {weatherData.weatherDescription}
       </p>
