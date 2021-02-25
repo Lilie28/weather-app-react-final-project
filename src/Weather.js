@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+import FormattedDate from "./FormattedDate";
+import FormattedTodayDate from "./FormattedTodayDate";
+import FormattedDateSunriseSunset from "./FormattedDateSunriseSunset";
 import axios from "axios";
 import "./Weather.css";
 
@@ -10,13 +13,13 @@ export default function Weather(props){
 function handleResponse(response){
   setWeatherData({
     city: response.data.name,
-    todayDate: "Sun 31 January",
-    date: "today at 20:20",
+    todayDate: new Date (response.data.dt * 1000),
+    date: new Date (response.data.dt * 1000),
     weatherDescription: response.data.weather[0].description,
     weatherIcon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
     currentTemperature: response.data.main.temp,
-    sunrise: response.data.sys.sunrise,
-    sunset: response.data.sys.sunset,
+    sunrise: new Date (response.data.sys.sunrise * 1000),
+    sunset: new Date (response.data.sys.sunset * 1000),
     humidity: response.data.main.humidity,
     wind: response.data.wind.speed,
     temperatureMax: response.data.main.temp_max,
@@ -50,12 +53,12 @@ if (ready){
       </form>
 
       <h1 className="city">{weatherData.city}</h1>
-      <h5 className="todayDate">{weatherData.todayDate}</h5>
+      <h5 className="todayDate"><FormattedTodayDate date={weatherData.date}/></h5>
       <br />
       <h6 className="sunrise-sunset">
-        Sunrise: <span>{weatherData.sunrise}</span>
+        Sunrise: <span><FormattedDateSunriseSunset date={weatherData.sunrise}/></span>
         <br />
-        Sunset: <span>{weatherData.sunset}</span>
+        Sunset: <span><FormattedDateSunriseSunset date={weatherData.sunset}/></span>
       </h6>
       <br />
 
@@ -74,7 +77,7 @@ if (ready){
       </div>
 
       <h6 className="updated">
-        Last updated: <span>{weatherData.date}</span>
+        Last updated: <span><FormattedDate date={weatherData.date}/></span>
       </h6>
 
       <img className="imageForExample" src={weatherData.weatherIcon} alt={weatherData.weatherDescription} />
