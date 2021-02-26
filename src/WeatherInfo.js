@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import FormattedTodayDate from "./FormattedTodayDate";
 import FormattedDateSunriseSunset from "./FormattedDateSunriseSunset";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props){
 return (
@@ -20,15 +21,7 @@ return (
 
       <div className="temperature-settings">
         <div className="float-left">
-          <span className="current-temperature">
-            {Math.round(props.data.currentTemperature)}
-          </span>
-          <small className="units">
-            <a href="#" className="active">
-              ˚C{" "}
-            </a>
-            |<a href="#">˚F </a>
-          </small>
+          <WeatherTemperature celsius={props.data.currentTemperature} />
         </div>
       </div>
 
