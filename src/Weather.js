@@ -15,7 +15,7 @@ function handleResponse(response){
     todayDate: new Date (response.data.dt * 1000),
     date: new Date (response.data.dt * 1000),
     weatherDescription: response.data.weather[0].description,
-    weatherIcon: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
+    weatherIcon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     currentTemperature: response.data.main.temp,
     sunrise: new Date (response.data.sys.sunrise * 1000),
     sunset: new Date (response.data.sys.sunset * 1000),
