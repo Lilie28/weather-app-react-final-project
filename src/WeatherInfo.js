@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedTodayDate from "./FormattedTodayDate";
 import FormattedDateSunriseSunset from "./FormattedDateSunriseSunset";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props){
 return (
@@ -35,7 +36,13 @@ return (
         Last updated: <span><FormattedDate date={props.data.date}/></span>
       </h6>
 
-      <img className="imageForExample" src={props.data.weatherIcon} alt={props.data.weatherDescription} />
+    <div className="iconImage">
+        <WeatherIcon 
+        code={props.data.icon} 
+        />
+    </div>
+
+      
       <p className="text-capitalize">
         {props.data.weatherDescription}
       </p>
