@@ -1,0 +1,22 @@
+.WeatherForecast {
+  text-align: center;
+  line-height: 30px;
+}
+
+.WeatherForecast canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.WeatherForecastPreviewIcon {
+  margin-right: -15px;
+}
+
+.WeatherForecastPreviewHours {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.WeatherForecastPreviewTemperature {
+  margin-top: -5px;
+}
