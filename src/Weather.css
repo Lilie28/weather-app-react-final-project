@@ -19,23 +19,17 @@ body {
 
 .container {
   border-radius: 10px;
-
   color: white;
-}
-
-.button-current-location {
-  border-color: rgb(238, 109, 163);
-  background-color: rgb(253, 215, 231);
 }
 
 .search-input {
   width: 58%;
   height: 26px;
   border-radius: 4px;
-  position: relative;
-  left: 130px;
-  top: -35px;
   border-color: rgb(238, 109, 163);
+  right: 30px;
+  position: relative;
+  left: 100px;
 }
 
 .search-button {
@@ -47,12 +41,12 @@ body {
   border-radius: 4px;
   transition: all 200ms ease-in-out;
   position: relative;
-  left: 130px;
-  top: -35px;
+  left: 100px;
 }
 
 h1 {
   text-align: center;
+  margin-top: 30px;
 }
 
 .city {
@@ -81,45 +75,35 @@ h1 {
 .current-temperature {
   font-size: 100px;
   font-weight: normal;
-  margin-left: 50px;
+  margin-left: 40px;
+  color: rgb(59, 2, 26);
 }
 
 .units {
-  font-size: 20px;
-  vertical-align: 180%;
+  font-size: 28px;
+  vertical-align: 122%;
+  color: rgb(59, 2, 26);
+  font-weight: bold;
 }
 
-#celsius-link {
-  color: white;
-  font-size: 20px;
-}
-
-#fahrenheit-link {
-  color: white;
-  font-size: 20px;
-}
-
-#emoji-current-weather {
-  width: 150px;
-  height: 150px;
-  margin-right: 100px;
-  margin-top: -35px;
+.unitsLink {
+  color: rgb(238, 109, 163);
+  text-decoration: underline;
 }
 
 .iconImage {
   float: right;
   margin-top: -160px;
-  margin-right: 30px;
+  margin-right: 70px;
   width: 100px;
   height: 100px;
-  background-color: blue;
 }
 
 .text-capitalize {
-  font-size: 20px;
+  font-size: 30px;
   float: right;
-  margin-right: 20px;
-  margin-top: -35px;
+  margin-right: 90px;
+  margin-top: -60px;
 }
 
 .updated {

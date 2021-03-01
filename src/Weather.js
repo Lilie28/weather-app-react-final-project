@@ -47,12 +47,7 @@ function search(){
 if (ready){
   return (
     <div className="Weather">
-      <h6>
-        <button type="submit" className="button-current-location">
-          📍
-        </button>
-        <span></span>
-      </h6>
+      
 
       <form className="search-form" onSubmit={handleSubmit}>
         <input
